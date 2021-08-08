@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="rel">
+    <title>Random User Generator</title>
+</head>
+<body>
+
+    <div id="app">
+        <!--v-bind short cut can be expressed just as a ':'-->
+        <img :class="gender" v-bind:src="picture" :alt="`${firstName} ${lastName} `">
+        <h1>{{firstName}} {{lastName}}</h1>
+        <h3>Email: {{email}}</h3>
+        <!--2 ways to add an event-->
+        <button v-on:click="getUser()" :class="gender">Get Random Uer</button>
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
